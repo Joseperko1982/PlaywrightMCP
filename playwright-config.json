@@ -1,0 +1,34 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "channel": "chrome",
+      "headless": false,
+      "devtools": true,
+      "slowMo": 250,
+      "args": [
+        "--auto-open-devtools-for-tabs",
+        "--disable-blink-features=AutomationControlled",
+        "--no-sandbox"
+      ]
+    },
+    "contextOptions": {
+      "viewport": null,
+      "ignoreHTTPSErrors": true,
+      "acceptDownloads": true,
+      "recordVideo": {
+        "dir": "./recordings"
+      }
+    }
+  },
+  "capabilities": ["tabs", "install", "pdf", "vision"],
+  "outputDir": "./playwright-output",
+  "network": {
+    "allowedOrigins": ["*"],
+    "blockedOrigins": []
+  },
+  "server": {
+    "port": 3000,
+    "host": "localhost"
+  }
+}
